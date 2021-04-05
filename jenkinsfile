@@ -1,0 +1,40 @@
+@Library('Shared-library@main') _
+
+pipeline {
+  agent any 
+	tools {
+		jdk 'JAVA_HOME'
+		git 'Default'
+		groovy 'GROOVY_HOME'
+	}
+	options {
+		buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '50')
+	}
+
+    stages {
+	
+		stage('Checkout') {
+			steps {
+			 GitClone(
+				branch: "master",
+				url: "https://github.com/ullas621988/CaseStudy.git"
+				)
+			}
+		}
+		
+		stage('Analyze&Report') {
+			steps {
+			 //Test()
+			CSVReadValues()
+			//CSVrun()
+			}
+		}	
+		
+	}
+	
+	/*post {
+  always {
+    emailnotification()
+  }
+}*/
+}
