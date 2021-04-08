@@ -5,7 +5,6 @@ pipeline {
 	tools {
 		jdk 'JAVA_HOME'
 		git 'Default'
-		groovy 'GROOVY_HOME'
 	}
 	options {
 		buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '50')
