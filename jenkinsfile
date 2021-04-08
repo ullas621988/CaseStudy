@@ -15,7 +15,7 @@ pipeline {
 		stage('Checkout') {
 			steps {
 			 GitClone(
-				branch: "master",
+				branch: "main",
 				url: "https://github.com/ullas621988/CaseStudy.git"
 				)
 			}
