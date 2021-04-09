@@ -14,7 +14,7 @@ pipeline {
 	
 		stage('Checkout') {
 			steps {
-			 GitClone(
+			 gitclone(
 				branch: "main",
 				url: "https://github.com/ullas621988/CaseStudy.git"
 				)
@@ -24,16 +24,16 @@ pipeline {
 		stage('Analyze&Report') {
 			steps {
 			 //Test()
-			CSVReadValues()
+			CSVpath()
 			//CSVrun()
 			}
 		}	
 		
 	}
 	
-	/*post {
+	post {
   always {
-    emailnotification()
+    mailnotification()
   }
-}*/
+}
 }
