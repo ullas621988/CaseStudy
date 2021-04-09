@@ -24,7 +24,7 @@ pipeline {
 		stage('Analyze&Report') {
 			steps {
 			 //Test()
-			CSVpath()
+			InputCSV()
 			//CSVrun()
 			}
 		}	
