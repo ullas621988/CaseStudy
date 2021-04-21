@@ -1,5 +1,4 @@
 AppID,AppName,Environment,ReleaseVersion,Status
-i
 132,CustomerService,PROD,1.0.1,Business Signed Off
 132,CustomerService,UAT,1.0.1,QA Signed Off
 132,CustomerService,SIT,1.0.1,QA Signed Off
